@@ -1,48 +1,54 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Container, Typography, Button, CircularProgress, List, ListItem, ListItemText } from '@mui/material';
-import axios from 'axios';
+import {
+  Container,
+  Typography,
+  Button,
+  CircularProgress,
+  List,
+  ListItem,
+  ListItemText,
+} from '@mui/material';
 
 function App() {
-  // Estados
-  const [data, setData] = useState([]); // Almacena los datos
-  const [loading, setLoading] = useState(false); // Indica si está cargando
-  const [error, setError] = useState(null); // Almacena errores, si ocurren
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
 
-  // Función para obtener datos
   const fetchData = async () => {
-    setLoading(true); // Muestra el spinner de carga
-    setError(null); // Limpia errores anteriores
+    setLoading(true);
     try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-      setData(response.data); // Guarda los datos en el estado
-    } catch (err) {
-      setError('Error al cargar los datos'); // Guarda el error
+      const response = await fetch('https://jsonplaceholder.typicode.com/users');
+      const result = await response.json();
+      setData(result);
+    } catch (error) {
+      console.error('Error al cargar datos:', error);
     } finally {
-      setLoading(false); // Finaliza la carga
+      setLoading(false);
     }
   };
 
   return (
-    <Container>
-      <Typography variant="h4" gutterBottom>
+    <Container className="container">
+      <Typography variant="h4" className="title" gutterBottom>
         Bienvenido a la Página de Inicio
       </Typography>
-      <Button variant="contained" color="primary" onClick={fetchData}>
-        Cargar Datos
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={fetchData}
+        disabled={loading}
+        className="button"
+      >
+        {loading ? 'Cargando...' : 'Cargar Datos'}
       </Button>
-
-      {/* Indicador de carga */}
-      {loading && <CircularProgress style={{ margin: '20px 0' }} />}
-
-      {/* Muestra errores */}
-      {error && <Typography color="error">{error}</Typography>}
-
-      {/* Lista de datos */}
-      <List>
-        {data.map((item) => (
-          <ListItem key={item.id}>
-            <ListItemText primary={item.title} secondary={`ID: ${item.id}`} />
+      {loading && <CircularProgress />}
+      <List className="list">
+        {data.map(user => (
+          <ListItem key={user.id} className="list-item">
+            <ListItemText
+              primary={user.name}
+              secondary={`${user.email} - ${user.address.city}`}
+            />
           </ListItem>
         ))}
       </List>
