@@ -1,3 +1,94 @@
-# Proyecto React Base\n\n## Descripción\nEste es un proyecto con React y Material-UI que muestra cómo manejar datos dinámicos con una API para el curso de React dentro de la certificacion de Pilar Tecno 5ta Edicion 2024. El objetivo es ofrecer una interfaz simple y funcional para cargar y mostrar datos.\n\n---\n\n## Instalación\n\n1. **Clonar el repositorio:**\n   ```bash\n   git clone https://github.com/tunombrederepositorio.git\n   cd proyectoreact\n   ```\n\n2. **Instalar las dependencias:**\n   ```bash\n   npm install\n   ```\n\n3. **Arrancar el servidor de desarrollo:**\n   ```bash\n   npm start\n   ```\n\n   Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.\n\n---\n\n## Comandos útiles\n\n- **Inicio del servidor:**\n   ```bash\n   npm start\n   ```\n   Este comando iniciará la aplicación en el entorno de desarrollo.\n\n- **Construir la aplicación para producción:**\n   ```bash\n   npm run build\n   ```\n   Este comando construye la aplicación optimizada para producción.\n\n- **Ejecutar pruebas:**\n   ```bash\n   npm test\n   ```\n   Ejecuta las pruebas configuradas en el proyecto.\n\n---\n\n## Estructura del Proyecto\n\n```\nproyectoreact/\n├── node_modules/\n├── public/\n│   └── index.html\n├── src/\n│   ├── App.css\n│   ├── App.js\n│   ├── index.js\n│   ├── components/\n│   │   └── DataComponent.js\n│   └── utils/\n│       └── fetchData.js\n├── .gitignore\n├── package.json\n└── README.md\n```\n\n---\n\n## Funcionalidades\n\n1. **Carga de Datos:**\n   - Botón para cargar datos desde una API.\n   - Visualización básica de datos cargados.\n\n2. **Estilización:**\n   - Uso de Material-UI para una interfaz limpia y responsive.\n\n---\n\n## Contribuciones\n\nLas contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, no dudes en crear un pull request.\n\n---\n\n## Licencia\n\nEste proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.\n```
 
+# Proyecto React Final
 
+## Descripción
+Este es un proyecto con React y Material-UI que muestra cómo manejar datos dinámicos con una API para el curso de React dentro de la certificación de Pilar Tecno 5ta Edición 2024. El objetivo es ofrecer una interfaz simple y funcional para cargar y mostrar datos.
+
+---
+
+## Instalación
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/tunombrederepositorio.git
+   cd proyectoreact
+   ```
+
+2. **Instalar las dependencias:**
+   ```bash
+   npm install
+   ```
+
+3. **Arrancar el servidor de desarrollo:**
+   ```bash
+   npm start
+   ```
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+
+---
+
+## Comandos útiles
+
+- **Inicio del servidor:**
+   ```bash
+   npm start
+   ```
+   Este comando iniciará la aplicación en el entorno de desarrollo.
+
+- **Construir la aplicación para producción:**
+   ```bash
+   npm run build
+   ```
+   Este comando construye la aplicación optimizada para producción.
+
+- **Ejecutar pruebas:**
+   ```bash
+   npm test
+   ```
+   Ejecuta las pruebas configuradas en el proyecto.
+
+---
+
+## Estructura del Proyecto
+
+```
+proyectoreact/
+├── node_modules/
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.css
+│   ├── App.js
+│   ├── index.js
+│   ├── components/
+│   │   └── DataComponent.js
+│   └── utils/
+│       └── fetchData.js
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
+
+## Funcionalidades
+
+1. **Carga de Datos:**
+   - Botón para cargar datos desde una API.
+   - Visualización básica de datos cargados.
+
+2. **Estilización:**
+   - Uso de Material-UI para una interfaz limpia y responsive.
+
+---
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, no dudes en crear un pull request.
+
+---
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+```
