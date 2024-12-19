@@ -10,7 +10,7 @@ Este es un proyecto con React y Material-UI para el curso de React dentro de la 
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone https://github.com/tunombrederepositorio.git
+   git clone https://github.com/fabrixh/ProyectoReact.git
    cd proyectoreact
    ```
 
