@@ -2,7 +2,7 @@
 # Proyecto React Final
 
 ## Descripción
-Este es un proyecto con React y Material-UI que muestra cómo manejar datos dinámicos con una API para el curso de React dentro de la certificación de Pilar Tecno 5ta Edición 2024. El objetivo es ofrecer una interfaz simple y funcional para cargar y mostrar datos.
+Este es un proyecto con React y Material-UI para el curso de React dentro de la certificación de Pilar Tecno 5ta Edición 2024, que muestra cómo manejar datos dinámicos con una API y un sistema de fake login. El objetivo es ofrecer una interfaz simple y funcional para cargar y mostrar datos con autenticación básica.
 
 ---
 
@@ -19,10 +19,19 @@ Este es un proyecto con React y Material-UI que muestra cómo manejar datos din�
    npm install
    ```
 
-3. **Arrancar el servidor de desarrollo:**
+3. **Configurar las variables de entorno:**
+   Crea un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+   ```plaintext
+   REACT_APP_API_URL=<https://jsonplaceholder.typicode.com>
+   REACT_APP_API_TOKEN=<No necesario en datos publicos>
+
+   ```
+
+4. **Arrancar el servidor de desarrollo:**
    ```bash
    npm start
    ```
+
    Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
 ---
@@ -61,9 +70,11 @@ proyectoreact/
 │   ├── App.js
 │   ├── index.js
 │   ├── components/
-│   │   └── DataComponent.js
+│   │   ├── DataComponent.js
+│   │   └── Login.js
 │   └── utils/
 │       └── fetchData.js
+├── .env
 ├── .gitignore
 ├── package.json
 └── README.md
@@ -77,18 +88,14 @@ proyectoreact/
    - Botón para cargar datos desde una API.
    - Visualización básica de datos cargados.
 
-2. **Estilización:**
+2. **Sistema de Fake Login:**
+   - Pantalla de inicio de sesión.
+   - Credenciales predeterminadas para acceder a la aplicación:
+     - **Usuario:** `admin`
+     - **Contraseña:** `123456`
+
+3. **Estilización:**
    - Uso de Material-UI para una interfaz limpia y responsive.
 
----
 
-## Contribuciones
 
-Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, no dudes en crear un pull request.
-
----
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
-```
